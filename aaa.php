@@ -18,8 +18,8 @@ $stmt = $dbh -> prepare($sql);
 $stmt -> execute();
 
 $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-var_dump($result[0]);
-echo '<br>';
+// var_dump($result[0]);
+// echo '<br>';
 ?>
 
 <!DOCTYPE html>
