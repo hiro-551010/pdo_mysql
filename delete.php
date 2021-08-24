@@ -14,7 +14,8 @@ try{
 
 $delete_id = $_POST['delete'];
 
-$sql = 'DELETE FROM users WHERE id = $delete_id';
+
+$sql = "DELETE FROM users WHERE id=$delete_id";
 $stmt = $dbh -> prepare($sql);
 $stmt -> execute();
 
