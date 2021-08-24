@@ -12,15 +12,12 @@ try{
     exit;
 };
 
-$sql = 'DELETE FROM users WHERE id = 15';
+$delete_id = $_POST['delete'];
+
+$sql = 'DELETE FROM users WHERE id = $delete_id';
 $stmt = $dbh -> prepare($sql);
 $stmt -> execute();
 
-while($result = $stmt -> fetch(PDO::FETCH_ASSOC)){
-    echo($result['id'].'_');
-    echo($result['name'].'_');
-    echo($result['email'].'_');
-}
-
 ?>
-<a href="./select.php">ユーザー一覧</a>
+<p>削除しました</p>
+<a href="./index.php">ユーザー一覧</a>

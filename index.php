@@ -36,6 +36,9 @@ $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
             <form action="update_form.php" method="post">
                 <button name="update" value="<?php echo $val['id']?>">update</button>
             </form>
+            <form action="delete.php" method="post">
+                <button name="delete" value="<?php echo $val['id']?>">delete</button>
+            </form>
             <p><?php echo $val['id'].'_', $val['name'].'_', $val["email"];?></p>
         </div>
     <?php endforeach;?>

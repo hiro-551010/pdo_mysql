@@ -17,17 +17,14 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 
-echo $id;
-var_dump ($id);
-echo $name;
-var_dump ($name);
-
 // 基本形
 // $sql = "UPDATE users SET name='taisho' WHERE id = 18";
 
 $sql = "UPDATE users SET name='$name', email='$email', pass='$pass' WHERE id = $id";
 $stmt = $dbh -> prepare($sql);
 $stmt -> execute();
+
+echo $id.'_', $name.'_', $email.'_', $pass.'_', 'に変更しました <br>';
 ?>
 
 <a href="./index.html">ユーザー登録に戻る</a>
